@@ -1,13 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coverage.Report", "src\Coverage.Report\Coverage.Report.csproj", "{B8B22656-506D-4BC5-BEA7-3E9BDEA3A427}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coverage.Report.Tests", "src\Coverage.Report.Tests\Coverage.Report.Tests.csproj", "{555EF022-4E3B-48BA-8662-7587C2D136B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{237F763A-C38D-4190-A970-2E9F14F5FF86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A8D1BF2-E4CC-44C2-B8C9-F556F04D3E53}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger", "src\Coverage.TestLogger\Microsoft.TestPlatform.Extensions.CoverageLogger.csproj", "{3A477103-341A-4500-B24E-E18DE429DC2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger.Tests", "src\Coverage.TestLogger.Tests\Microsoft.TestPlatform.Extensions.CoverageLogger.Tests.csproj", "{99288540-3960-433D-8A90-B7E3BB6700BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +32,14 @@ Global
 		{555EF022-4E3B-48BA-8662-7587C2D136B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{555EF022-4E3B-48BA-8662-7587C2D136B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{555EF022-4E3B-48BA-8662-7587C2D136B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A477103-341A-4500-B24E-E18DE429DC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A477103-341A-4500-B24E-E18DE429DC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A477103-341A-4500-B24E-E18DE429DC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A477103-341A-4500-B24E-E18DE429DC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99288540-3960-433D-8A90-B7E3BB6700BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99288540-3960-433D-8A90-B7E3BB6700BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99288540-3960-433D-8A90-B7E3BB6700BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99288540-3960-433D-8A90-B7E3BB6700BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +47,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B8B22656-506D-4BC5-BEA7-3E9BDEA3A427} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
 		{555EF022-4E3B-48BA-8662-7587C2D136B0} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
+		{3A477103-341A-4500-B24E-E18DE429DC2F} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
+		{99288540-3960-433D-8A90-B7E3BB6700BC} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13EDC7D7-8AE9-47E4-9FA2-E1CFCB3581E6}

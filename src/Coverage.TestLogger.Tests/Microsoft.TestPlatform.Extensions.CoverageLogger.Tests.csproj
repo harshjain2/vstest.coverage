@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <AssemblyName>Microsoft.TestPlatform.Extensions.CoverageLogger.Tests</AssemblyName>
+    <WarningsAsErrors>true</WarningsAsErrors>
+    <EnableCodeAnalysis>true</EnableCodeAnalysis>
+    <MSTestVersion>1.3.2</MSTestVersion>
+    <NETTestSdkPreviousVersion>15.8.0</NETTestSdkPreviousVersion>
+    <MoqVersion>4.9.0</MoqVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\amd64\covrun64.dll" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\amd64\covrun64.pdb" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\amd64\msdia140.dll" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\amd64\msdia140.pdb" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.config" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.exe" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.pdb" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\codecoveragemessages.dll" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\covrun32.dll" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\covrun32.pdb" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\msdia140.dll" />
+    <None Remove="TestData\CodeCoverageExe\CodeCoverage\msdia140.pdb" />
+    <None Remove="TestData\CodeCoverageExe\Shim\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll" />
+    <None Remove="TestData\CodeCoverageExe\Shim\net45\Microsoft.VisualStudio.CodeCoverage.Shim.pdb" />
+    <None Remove="TestData\CodeCoverageExe\Shim\netcoreapp1.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll" />
+    <None Remove="TestData\CodeCoverageExe\Shim\netcoreapp1.0\Microsoft.VisualStudio.CodeCoverage.Shim.pdb" />
+    <None Remove="TestData\Expected.xml" />
+    <None Remove="TestData\Sample.coverage" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\amd64\covrun64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\amd64\covrun64.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\amd64\msdia140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\amd64\msdia140.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\CodeCoverage.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\codecoveragemessages.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\covrun32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\covrun32.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\msdia140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\CodeCoverage\msdia140.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\Shim\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\Shim\net45\Microsoft.VisualStudio.CodeCoverage.Shim.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\Shim\netcoreapp1.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\CodeCoverageExe\Shim\netcoreapp1.0\Microsoft.VisualStudio.CodeCoverage.Shim.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Sample.coverage">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestData\Expected.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestFramework">
+      <Version>$(MSTestVersion)</Version>
+    </PackageReference>
+    <PackageReference Include="MSTest.TestAdapter">
+      <Version>$(MSTestVersion)</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk">
+      <Version>$(NETTestSdkPreviousVersion)</Version>
+    </PackageReference>
+    <PackageReference Include="Moq">
+      <Version>$(MoqVersion)</Version>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Coverage.TestLogger\Microsoft.TestPlatform.Extensions.CoverageLogger.csproj" />
+  </ItemGroup>
+</Project>
