@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coverage.Report.Tests", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{237F763A-C38D-4190-A970-2E9F14F5FF86}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A8D1BF2-E4CC-44C2-B8C9-F556F04D3E53}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{914F9B9A-7FC7-48F3-9770-E96A4E608B95}"
 	ProjectSection(SolutionItems) = preProject
 		.appveyor.yml = .appveyor.yml
 		.travis.yml = .travis.yml
@@ -21,17 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeCoverageReader", "src\C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeCoverageReaderTests", "src\CodeCoverageToLcovConverterTests\CodeCoverageReaderTests.csproj", "{815DD963-BBFE-453F-9DFB-CD24577A4006}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A8D1BF2-E4CC-44C2-B8C9-F556F04D3E53}"
-	ProjectSection(SolutionItems) = preProject
-		.appveyor.yml = .appveyor.yml
-		.travis.yml = .travis.yml
-		NuGet.config = NuGet.config
-		README.md = README.md
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger", "src\Coverage.TestLogger\Microsoft.TestPlatform.Extensions.CoverageLogger.csproj", "{6E79E689-49F3-41E9-A8F1-06E664DFD8E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger", "src\Coverage.TestLogger\Microsoft.TestPlatform.Extensions.CoverageLogger.csproj", "{3A477103-341A-4500-B24E-E18DE429DC2F}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger.Tests", "src\Coverage.TestLogger.Tests\Microsoft.TestPlatform.Extensions.CoverageLogger.Tests.csproj", "{99288540-3960-433D-8A90-B7E3BB6700BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.TestPlatform.Extensions.CoverageLogger.Tests", "src\Coverage.TestLogger.Tests\Microsoft.TestPlatform.Extensions.CoverageLogger.Tests.csproj", "{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,14 +47,14 @@ Global
 		{815DD963-BBFE-453F-9DFB-CD24577A4006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{815DD963-BBFE-453F-9DFB-CD24577A4006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{815DD963-BBFE-453F-9DFB-CD24577A4006}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A477103-341A-4500-B24E-E18DE429DC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A477103-341A-4500-B24E-E18DE429DC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A477103-341A-4500-B24E-E18DE429DC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A477103-341A-4500-B24E-E18DE429DC2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{99288540-3960-433D-8A90-B7E3BB6700BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{99288540-3960-433D-8A90-B7E3BB6700BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{99288540-3960-433D-8A90-B7E3BB6700BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{99288540-3960-433D-8A90-B7E3BB6700BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E79E689-49F3-41E9-A8F1-06E664DFD8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E79E689-49F3-41E9-A8F1-06E664DFD8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E79E689-49F3-41E9-A8F1-06E664DFD8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E79E689-49F3-41E9-A8F1-06E664DFD8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,8 +64,8 @@ Global
 		{555EF022-4E3B-48BA-8662-7587C2D136B0} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
 		{16EB7C01-C130-4D62-A278-08380C191E38} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
 		{815DD963-BBFE-453F-9DFB-CD24577A4006} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
-		{3A477103-341A-4500-B24E-E18DE429DC2F} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
-		{99288540-3960-433D-8A90-B7E3BB6700BC} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
+		{6E79E689-49F3-41E9-A8F1-06E664DFD8E9} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
+		{EC70AEA5-F1E7-4645-AC68-7CE2ACA36810} = {237F763A-C38D-4190-A970-2E9F14F5FF86}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13EDC7D7-8AE9-47E4-9FA2-E1CFCB3581E6}
