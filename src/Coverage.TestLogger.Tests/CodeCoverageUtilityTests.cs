@@ -1,14 +1,12 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-
-using System;
-
 namespace Microsoft.TestPlatform.Extensions.CoverageLogger.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System;
     using System.IO;
     using System.Reflection;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class CodeCoverageUtilityTests
@@ -41,8 +39,6 @@ namespace Microsoft.TestPlatform.Extensions.CoverageLogger.Tests
             File.Delete(this.sampleCodeCoverageFilePath);
 
             Assert.AreEqual(expectedFileText, generatedFileText, "Generated file doesn't have correct data.");
-
-
         }
 
         [TestMethod]

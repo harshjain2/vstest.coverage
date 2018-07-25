@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-
 namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
 {
     using System;
@@ -26,7 +25,6 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
 
         private const string FriendlyName = "CoverageLogger";
 
-
         private const string SetupInteropx86 = @"x86\Microsoft.VisualStudio.Setup.Configuration.Native.dll";
 
         private const string SetupInteropx64 = @"x64\Microsoft.VisualStudio.Setup.Configuration.Native.dll";
@@ -44,7 +42,6 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
         /// <inheritdoc/>
         public void Initialize(TestLoggerEvents events, string testResultsDirPath)
         {
-            System.Diagnostics.Debugger.Launch();
             if (events == null)
             {
                 throw new ArgumentNullException(nameof(events));
@@ -81,7 +78,6 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
             if (coverageAttachments.Any())
             {
                 var codeCoverageFiles = coverageAttachments.Select(coverageAttachment => coverageAttachment.Attachments[0].Uri.LocalPath).ToArray();
-
                 foreach (var codeCoverageFile in codeCoverageFiles)
                 {
                     var resultFile = Path.Combine(Path.GetDirectoryName(codeCoverageFile), Path.GetFileNameWithoutExtension(codeCoverageFile) + ".xml");
@@ -95,7 +91,7 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
                         ConsoleOutput.Instance.WriteLine(ex.Message, OutputLevel.Information);
                     }
 
-                    var summary =  this.codeCoverageUtility.GetCoverageSummary(resultFile);
+                    var summary = this.codeCoverageUtility.GetCoverageSummary(resultFile);
                     ConsoleOutput.Instance.WriteLine(summary, OutputLevel.Information);
                 }
             }

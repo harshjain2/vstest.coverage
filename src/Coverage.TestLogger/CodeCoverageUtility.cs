@@ -1,19 +1,18 @@
 ﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System.Text;
-
 namespace Microsoft.TestPlatform.Extensions.CoverageLogger
 {
     using System;
     using System.Diagnostics;
     using System.Globalization;
     using System.IO;
+    using System.Text;
     using System.Threading;
     using System.Xml;
+
     using Microsoft.TestPlatform.Extensions.CoverageLogger.Resources;
     using Microsoft.VisualStudio.TestPlatform.ObjectModel;
-    using Microsoft.VisualStudio.TestPlatform.Utilities;
 
     public class CodeCoverageUtility
     {
