@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VstestCoverageRoot Condition="$(VstestCoverageRoot) == ''">..\..\</VstestCoverageRoot>
+    <TestProject>true</TestProject>
+  </PropertyGroup>
+  <Import Project="$(VstestCoverageRoot)scripts/build/Vstest.Coverage.Settings.targets" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DebugType>Full</DebugType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeCoverageToLcovConverter\CodeCoverageReader.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="TestAssets\ParseCoverageFileWithOneSourceAndOneLineCovered.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestAssets\ParseCoverageFileWithTwoSourcesAndOneMultipleLinesCovered.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="TestAssets\ParseCoverageFileWithTwoSourcesAndOneMultipleLinesCoveredSomePartiallyCovered.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
