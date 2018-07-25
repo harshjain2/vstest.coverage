@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Microsoft.TestPlatform.Extensions.CoverageLogger.Resources {
+namespace Coverage.TestLogger.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Microsoft.TestPlatform.Extensions.CoverageLogger.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Microsoft.TestPlatform.Extensions.CoverageLogger.Resources.CoverageResource", typeof(CoverageResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Coverage.TestLogger.Resources.CoverageResource", typeof(CoverageResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

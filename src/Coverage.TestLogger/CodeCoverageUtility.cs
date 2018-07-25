@@ -11,7 +11,8 @@ namespace Microsoft.TestPlatform.Extensions.CoverageLogger
     using System.Threading;
     using System.Xml;
 
-    using Microsoft.TestPlatform.Extensions.CoverageLogger.Resources;
+    using Coverage.TestLogger.Resources;
+
     using Microsoft.VisualStudio.TestPlatform.ObjectModel;
 
     public class CodeCoverageUtility
@@ -107,18 +108,6 @@ namespace Microsoft.TestPlatform.Extensions.CoverageLogger
 
                 vanguardProcess.WaitForExit();
             }
-            catch (DllNotFoundException ex)
-            {
-                throw;
-            }
-            catch (NullReferenceException ex)
-            {
-                throw;
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
             finally
             {
                 this.vanguardProcess?.Dispose();
@@ -139,7 +128,8 @@ namespace Microsoft.TestPlatform.Extensions.CoverageLogger
             {
                 if (this.vanguardProcess.HasExited && this.vanguardProcess.ExitCode != 0)
                 {
-                    EqtTrace.Error(this.vanguardProcess.StandardError.ReadToEnd());
+                    //TODO : Make it testable.
+                    //EqtTrace.Error(this.vanguardProcess.StandardError.ReadToEnd());
                 }
 
                 this.vanguardProcess.Exited -= this.CodeCoverageExited;

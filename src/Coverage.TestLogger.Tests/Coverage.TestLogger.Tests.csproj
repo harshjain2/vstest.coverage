@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
-    <AssemblyName>Microsoft.TestPlatform.Extensions.CoverageLogger.Tests</AssemblyName>
+    <AssemblyName>Spekt.Vstest.Coverage.TestLogger.Tests</AssemblyName>
     <WarningsAsErrors>true</WarningsAsErrors>
     <EnableCodeAnalysis>true</EnableCodeAnalysis>
     <MSTestVersion>1.3.2</MSTestVersion>
@@ -38,6 +38,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Coverage.TestLogger\Microsoft.TestPlatform.Extensions.CoverageLogger.csproj" />
+    <ProjectReference Include="..\Coverage.TestLogger\Coverage.TestLogger.csproj" />
   </ItemGroup>
 </Project>

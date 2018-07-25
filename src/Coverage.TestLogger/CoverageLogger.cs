@@ -10,7 +10,6 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
     using Microsoft.TestPlatform.Extensions.CoverageLogger;
     using Microsoft.VisualStudio.TestPlatform.ObjectModel;
     using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
-    using Microsoft.VisualStudio.TestPlatform.Utilities;
 
     /// <summary>
     /// Logger for Generating CodeCoverage Analysis
@@ -81,25 +80,28 @@ namespace Microsoft.VisualStudio.TestPlatform.Extensions.CoverageLogger
                 foreach (var codeCoverageFile in codeCoverageFiles)
                 {
                     var resultFile = Path.Combine(Path.GetDirectoryName(codeCoverageFile), Path.GetFileNameWithoutExtension(codeCoverageFile) + ".xml");
-                    var arguments = "analyze /output:" + '"' + resultFile + '"' + " " + '"' + codeCoverageFile + '"';
                     try
                     {
-                        this.codeCoverageUtility.AnalyzeCoverageFile(arguments, this.GetCodeCoverageExePath());
+                        this.codeCoverageUtility.AnalyzeCoverageFile(codeCoverageFile, this.GetCodeCoverageExePath());
                     }
                     catch (Exception ex)
                     {
-                        ConsoleOutput.Instance.WriteLine(ex.Message, OutputLevel.Information);
+                        Console.WriteLine(ex.Message);
                     }
 
                     var summary = this.codeCoverageUtility.GetCoverageSummary(resultFile);
-                    ConsoleOutput.Instance.WriteLine(summary, OutputLevel.Information);
+                    Console.WriteLine(summary);
                 }
             }
         }
 
         private string GetCodeCoverageExePath()
         {
-            return @"C:\Users\harjain\.nuget\packages\microsoft.internal.codecoverage\1.0.9\contentFiles\any\any\CodeCoverage";
+            //TODO: Find the location of Microsoft.CodeCoverage nuget package.
+            // 1. Check "NUGET_PACKAGES" Environment Variable.
+            // 2. Check "NUGET_FALLBACK_PACKAGES" Environment Variable.
+            // 3. Check Visual Studio Install Path and get the location of CodeCoverage.exe
+            return string.Empty;
         }
 
         #endregion
